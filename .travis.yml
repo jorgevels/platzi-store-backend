@@ -15,7 +15,6 @@ script:
   - yarn test
 
 notifications:
-  # slack: workspace:token
   email:
     reciepients:
       - jorgevelasquez006@hotmail.com
@@ -24,11 +23,11 @@ notifications:
 
 deploy:
   provide: heroku
-  # Limpieza
+
   skip-cleanup: true
-  # Historial
+
   keep-history: true
-  # desde heroku
+
   api_key: apiKey
   app: platzi-store-backends
   on:
