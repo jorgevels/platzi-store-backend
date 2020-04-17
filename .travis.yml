@@ -1,0 +1,35 @@
+language: node_js
+
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+
+node_js:
+  - "12"
+
+git:
+  depth: 3
+
+script:
+  - yarn test
+
+notifications:
+  # slack: workspace:token
+  email:
+    reciepients:
+      - jorgevelasquez006@hotmail.com
+    on_success: always
+    on_failure: always
+
+deploy:
+  provide: heroku
+  # Limpieza
+  skip-cleanup: true
+  # Historial
+  keep-history: true
+  # desde heroku
+  api_key: apiKey
+  app: platzi-store-backends
+  on:
+    repo: jorgevels/platzi-store-backend
