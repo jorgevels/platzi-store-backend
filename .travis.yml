@@ -28,7 +28,7 @@ deploy:
 
   keep-history: true
 
-  api_key: apiKey
+  api_key: 1fde03c4-7dbe-4759-8401-a93b593d8d53
   app: platzi-store-backends
   on:
     repo: jorgevels/platzi-store-backend
